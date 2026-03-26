@@ -1,0 +1,459 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Surprise Gift 💜</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="entrance-active">
+
+<!-- ══════════════ ENTRANCE ══════════════ -->
+<div id="entrance">
+  <div class="e-orb e-orb-1"></div>
+  <div class="e-orb e-orb-2"></div>
+  <div class="e-orb e-orb-3"></div>
+  <div id="e-particle-layer"></div>
+
+  <!-- Envelope icon -->
+  <div class="e-envelope">
+    <svg width="110" height="88" viewBox="0 0 110 88" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="2" y="2" width="106" height="84" rx="12" fill="rgba(124,58,237,0.25)" stroke="rgba(192,132,252,0.5)" stroke-width="2"/>
+      <path d="M2 14 L55 52 L108 14" stroke="rgba(192,132,252,0.7)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M2 86 L38 50" stroke="rgba(192,132,252,0.45)" stroke-width="1.8" stroke-linecap="round"/>
+      <path d="M108 86 L72 50" stroke="rgba(192,132,252,0.45)" stroke-width="1.8" stroke-linecap="round"/>
+      <!-- Heart seal -->
+      <path d="M55 34 C55 34 44 24 44 18 C44 13.6 47.6 10 52 10 C53.8 10 55 11 55 11 C55 11 56.2 10 58 10 C62.4 10 66 13.6 66 18 C66 24 55 34 55 34Z" fill="#f59e0b" opacity="0.9"/>
+    </svg>
+  </div>
+
+  <p class="e-pre">✦ &nbsp; A Special Surprise &nbsp; ✦</p>
+  <p class="e-for">I HOPE YOU WILL LOVE THIS SURPRISE I MADE FOR YOU!</p>
+  <h1 class="e-name">Hello babi! 💜</h1>
+  <p class="e-tagline">03-26-2026 &nbsp;|&nbsp; A Day to Celebrate You!</p>
+  <div class="e-divider"></div>
+
+  <div style="position:relative;display:inline-block;z-index:1">
+    <div class="e-btn-ring"></div>
+    <button class="e-btn" id="enterBtn" onclick="enterSite()">Open Your Surprise &nbsp;🎀</button>
+  </div>
+</div>
+
+<!-- Confetti -->
+<canvas id="confetti-canvas"></canvas>
+
+<!-- Navigation -->
+<nav>
+  <a href="#hero">Home</a>
+  <a href="#gallery">Gallery</a>
+  <a href="#message">Message</a>
+  <a href="#cake-section">Cake</a>
+</nav>
+
+<!-- ══════════════ HERO ══════════════ -->
+<section id="hero">
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+  <div class="balloon-layer" id="balloonLayer"></div>
+  <div class="sparkle-layer" id="sparkleLayer"></div>
+
+  <div class="hero-content">
+    <p class="hero-eyebrow">✨ Today is your special day ✨</p>
+    <h1 class="hero-title">Happy 21st Birthday</h1>
+    <span class="hero-name">To You My Babi! 🐻🎂</span>
+    <p class="hero-subtitle">
+      May every moment of this day be filled with the same joy and love you bring to everyone around you.
+    </p>
+    <div class="hero-badges">
+      <span class="badge">💜 Singer</span>
+      <span class="badge">✨ Dancer</span>
+      <span class="badge">🌟 Lovely Person</span>
+    </div>
+    <div class="scroll-hint">
+      <span>Scroll Down</span>
+      <div class="scroll-arrow"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ GALLERY ══════════════ -->
+<section id="gallery">
+  <div class="section-header reveal">
+    <p class="section-tag">📸 Memories</p>
+    <h2 class="section-title">A Gallery of Beautiful Moments</h2>
+    <div class="divider"></div>
+  </div>
+
+  <div class="gallery-grid">
+
+    <!-- ── Featured hero ── -->
+    <div class="gallery-item wide reveal">
+      <img src="photo/jannah.png" alt="The Birthday Star" loading="lazy" />
+      <div class="gal-caption"><h3>The Birthday Star ⭐</h3><p>You light up every room 💜</p></div>
+    </div>
+
+    <div class="gallery-item reveal" style="transition-delay:.05s">
+      <img src="photo/photo_1_2026-03-26_20-26-13.jpg" alt="Cherished memory" loading="lazy" />
+      <div class="gal-caption"><h3>Cherished Memories</h3><p>Every moment with you is precious 💜</p></div>
+    </div>
+    <div class="gallery-item reveal" style="transition-delay:.1s">
+      <img src="photo/photo_2_2026-03-26_20-26-13.jpg" alt="Pure happiness" loading="lazy" />
+      <div class="gal-caption"><h3>Pure Happiness</h3><p>Your smile is contagious 🌸</p></div>
+    </div>
+    <div class="gallery-item reveal" style="transition-delay:.15s">
+      <img src="photo/photo_3_2026-03-26_20-26-13.jpg" alt="Golden days" loading="lazy" />
+      <div class="gal-caption"><h3>Golden Days</h3><p>Sunshine follows wherever you go ☀️</p></div>
+    </div>
+    <div class="gallery-item reveal" style="transition-delay:.2s">
+      <img src="photo/photo_4_2026-03-26_20-26-13.jpg" alt="Best moments" loading="lazy" />
+      <div class="gal-caption"><h3>Best Moments</h3><p>Making memories that last forever 💫</p></div>
+    </div>
+
+    <!-- ── Wide feature ── -->
+    <div class="gallery-item wide reveal" style="transition-delay:.25s">
+      <img src="photo/photo_2026-03-26_20-25-34.jpg" alt="A moment to remember" loading="lazy" />
+      <div class="gal-caption"><h3>A Moment to Remember</h3><p>Captured in time, treasured forever 🌟</p></div>
+    </div>
+
+    <div class="gallery-item reveal" style="transition-delay:.3s">
+      <img src="photo/photo_5_2026-03-26_20-26-13.jpg" alt="Joy and laughter" loading="lazy" />
+      <div class="gal-caption"><h3>Joy & Laughter</h3><p>The sound of your laugh is music 🎶</p></div>
+    </div>
+    <div class="gallery-item reveal" style="transition-delay:.35s">
+      <img src="photo/photo_6_2026-03-26_20-26-13.jpg" alt="Bright smiles" loading="lazy" />
+      <div class="gal-caption"><h3>Bright Smiles</h3><p>Your happiness is our happiness 💜</p></div>
+    </div>
+    <div class="gallery-item reveal" style="transition-delay:.4s">
+      <img src="photo/photo_7_2026-03-26_20-26-13.jpg" alt="Beautiful soul" loading="lazy" />
+      <div class="gal-caption"><h3>Beautiful Soul</h3><p>Inside and out, you're radiant 🌺</p></div>
+    </div>
+    <div class="gallery-item reveal" style="transition-delay:.45s">
+      <img src="photo/photo_8_2026-03-26_20-26-13.jpg" alt="Adventures await" loading="lazy" />
+      <div class="gal-caption"><h3>Adventures Await</h3><p>Every journey with you is magical ✨</p></div>
+    </div>
+
+    <!-- ── Wide feature ── -->
+    <div class="gallery-item wide reveal" style="transition-delay:.5s">
+      <img src="photo/photo_2026-03-26_20-25-41.jpg" alt="Life's beautiful chapters" loading="lazy" />
+      <div class="gal-caption"><h3>Life's Beautiful Chapters</h3><p>Each photo a page in your beautiful story 📖</p></div>
+    </div>
+
+    <div class="gallery-item reveal" style="transition-delay:.05s">
+      <img src="photo/photo_9_2026-03-26_20-26-13.jpg" alt="Timeless beauty" loading="lazy" />
+      <div class="gal-caption"><h3>Timeless Beauty</h3><p>A face we never tire of seeing 🌸</p></div>
+    </div>
+    <div class="gallery-item reveal" style="transition-delay:.1s">
+      <img src="photo/photo_10_2026-03-26_20-26-13.jpg" alt="Sweet memories" loading="lazy" />
+      <div class="gal-caption"><h3>Sweet Memories</h3><p>These moments are why we smile 💛</p></div>
+    </div>
+    <div class="gallery-item reveal" style="transition-delay:.15s">
+      <img src="photo/photo_11_2026-03-26_20-26-13.jpg" alt="Heart of gold" loading="lazy" />
+      <div class="gal-caption"><h3>Heart of Gold</h3><p>Your kindness knows no bounds 💜</p></div>
+    </div>
+    <div class="gallery-item reveal" style="transition-delay:.2s">
+      <img src="photo/photo_12_2026-03-26_20-26-13.jpg" alt="Sparkling eyes" loading="lazy" />
+      <div class="gal-caption"><h3>Sparkling Eyes</h3><p>The world looks brighter through your eyes 🌟</p></div>
+    </div>
+
+    <!-- ── Wide feature ── -->
+    <div class="gallery-item wide reveal" style="transition-delay:.25s">
+      <img src="photo/photo_2026-03-26_20-25-42.jpg" alt="Together and happy" loading="lazy" />
+      <div class="gal-caption"><h3>Together & Happy</h3><p>The best times are when we're together 💜</p></div>
+    </div>
+
+    <div class="gallery-item reveal" style="transition-delay:.3s">
+      <img src="photo/photo_13_2026-03-26_20-26-13.jpg" alt="Joyful spirit" loading="lazy" />
+      <div class="gal-caption"><h3>Joyful Spirit</h3><p>You bring joy to everyone around you 🌸</p></div>
+    </div>
+    <div class="gallery-item reveal" style="transition-delay:.35s">
+      <img src="photo/photo_14_2026-03-26_20-26-13.jpg" alt="Wonderful you" loading="lazy" />
+      <div class="gal-caption"><h3>Wonderful You</h3><p>Simply wonderful in every way 🌸</p></div>
+    </div>
+    <div class="gallery-item reveal" style="transition-delay:.4s">
+      <img src="photo/photo_15_2026-03-26_20-26-13.jpg" alt="Priceless moments" loading="lazy" />
+      <div class="gal-caption"><h3>Priceless Moments</h3><p>Worth more than words can say 💫</p></div>
+    </div>
+    <div class="gallery-item reveal" style="transition-delay:.45s">
+      <img src="photo/photo_16_2026-03-26_20-26-13.jpg" alt="Unforgettable" loading="lazy" />
+      <div class="gal-caption"><h3>Unforgettable</h3><p>You are forever in our hearts 💜</p></div>
+    </div>
+
+    <!-- ── Wide feature ── -->
+    <div class="gallery-item wide reveal" style="transition-delay:.5s">
+      <img src="photo/photo_2026-03-26_20-25-44.jpg" alt="Forever and always" loading="lazy" />
+      <div class="gal-caption"><h3>Forever & Always</h3><p>Some bonds only grow stronger with time 💜</p></div>
+    </div>
+
+    <div class="gallery-item reveal" style="transition-delay:.05s">
+      <img src="photo/photo_17_2026-03-26_20-26-13.jpg" alt="So much love" loading="lazy" />
+      <div class="gal-caption"><h3>So Much Love</h3><p>Surrounded by love each and every day 🌺</p></div>
+    </div>
+    <div class="gallery-item reveal" style="transition-delay:.1s">
+      <img src="photo/photo_18_2026-03-26_20-26-13.jpg" alt="Magic moments" loading="lazy" />
+      <div class="gal-caption"><h3>Magic Moments</h3><p>You create magic everywhere you go ✨</p></div>
+    </div>
+    <div class="gallery-item reveal" style="transition-delay:.15s">
+      <img src="photo/photo_19_2026-03-26_20-26-13.jpg" alt="Shining star" loading="lazy" />
+      <div class="gal-caption"><h3>Shining Star</h3><p>Brighter than any star in the sky 🌟</p></div>
+    </div>
+    <div class="gallery-item reveal" style="transition-delay:.2s">
+      <img src="photo/photo_20_2026-03-26_20-26-13.jpg" alt="Beautiful life" loading="lazy" />
+      <div class="gal-caption"><h3>Beautiful Life</h3><p>Living beautifully, one day at a time 🌸</p></div>
+    </div>
+
+    <!-- ── Wide feature ── -->
+    <div class="gallery-item wide reveal" style="transition-delay:.25s">
+      <img src="photo/photo_2026-03-26_20-25-46.jpg" alt="A life well lived" loading="lazy" />
+      <div class="gal-caption"><h3>A Life Well Lived</h3><p>Every day with you is a gift 🎁</p></div>
+    </div>
+
+    <div class="gallery-item reveal" style="transition-delay:.3s">
+      <img src="photo/photo_21_2026-03-26_20-26-13.jpg" alt="Laughter and light" loading="lazy" />
+      <div class="gal-caption"><h3>Laughter & Light</h3><p>Your laughter fills every room 😄</p></div>
+    </div>
+    <div class="gallery-item reveal" style="transition-delay:.35s">
+      <img src="photo/photo_22_2026-03-26_20-26-13.jpg" alt="Endless charm" loading="lazy" />
+      <div class="gal-caption"><h3>Endless Charm</h3><p>Naturally charming in everything you do 🌸</p></div>
+    </div>
+    <div class="gallery-item reveal" style="transition-delay:.4s">
+      <img src="photo/photo_23_2026-03-26_20-26-13.jpg" alt="Dream big" loading="lazy" />
+      <div class="gal-caption"><h3>Dream Big</h3><p>Your dreams are as big as the sky 🌙</p></div>
+    </div>
+    <div class="gallery-item reveal" style="transition-delay:.45s">
+      <img src="photo/photo_24_2026-03-26_20-26-13.jpg" alt="Radiant" loading="lazy" />
+      <div class="gal-caption"><h3>Radiant</h3><p>Glowing from the inside out ✨</p></div>
+    </div>
+    <div class="gallery-item reveal" style="transition-delay:.5s">
+      <img src="photo/photo_25_2026-03-26_20-26-13.jpg" alt="Pure joy" loading="lazy" />
+      <div class="gal-caption"><h3>Pure Joy</h3><p>Joy is what you bring 💜</p></div>
+    </div>
+    <div class="gallery-item reveal" style="transition-delay:.05s">
+      <img src="photo/photo_26_2026-03-26_20-26-13.jpg" alt="Moments like these" loading="lazy" />
+      <div class="gal-caption"><h3>Moments Like These</h3><p>These are the days we'll look back on 🌟</p></div>
+    </div>
+    <div class="gallery-item reveal" style="transition-delay:.1s">
+      <img src="photo/photo_27_2026-03-26_20-26-13.jpg" alt="Warmth" loading="lazy" />
+      <div class="gal-caption"><h3>Warmth</h3><p>Your warmth melts every heart 💜</p></div>
+    </div>
+    <div class="gallery-item reveal" style="transition-delay:.15s">
+      <img src="photo/photo_28_2026-03-26_20-26-13.jpg" alt="Cherished" loading="lazy" />
+      <div class="gal-caption"><h3>Cherished</h3><p>Cherished beyond measure 🌸</p></div>
+    </div>
+    <div class="gallery-item reveal" style="transition-delay:.2s">
+      <img src="photo/photo_29_2026-03-26_20-26-13.jpg" alt="Loved" loading="lazy" />
+      <div class="gal-caption"><h3>Loved</h3><p>So deeply, truly loved 💜</p></div>
+    </div>
+    <div class="gallery-item reveal" style="transition-delay:.25s">
+      <img src="photo/photo_30_2026-03-26_20-26-13.jpg" alt="Wonder" loading="lazy" />
+      <div class="gal-caption"><h3>Wonder</h3><p>A wonderful person through and through 💫</p></div>
+    </div>
+    <div class="gallery-item reveal" style="transition-delay:.3s">
+      <img src="photo/photo_31_2026-03-26_20-26-13.jpg" alt="Simply you" loading="lazy" />
+      <div class="gal-caption"><h3>Simply You</h3><p>Simply, beautifully you 💜</p></div>
+    </div>
+    <div class="gallery-item reveal" style="transition-delay:.35s">
+      <img src="photo/photo_32_2026-03-26_20-26-14.jpg" alt="Always" loading="lazy" />
+      <div class="gal-caption"><h3>Always</h3><p>Always in our thoughts and hearts 🌸</p></div>
+    </div>
+    <div class="gallery-item reveal" style="transition-delay:.4s">
+      <img src="photo/photo_33_2026-03-26_20-26-14.jpg" alt="Celebrate" loading="lazy" />
+      <div class="gal-caption"><h3>Celebrate!</h3><p>Today we celebrate YOU 🎉</p></div>
+    </div>
+    <div class="gallery-item reveal" style="transition-delay:.45s">
+      <img src="photo/photo_34_2026-03-26_20-26-14.jpg" alt="Grateful" loading="lazy" />
+      <div class="gal-caption"><h3>Grateful</h3><p>So grateful to have you in our lives 💜</p></div>
+    </div>
+
+    <!-- ── Final wide features ── -->
+    <div class="gallery-item wide reveal" style="transition-delay:.5s">
+      <img src="photo/photo_35_2026-03-26_20-26-14.jpg" alt="Happy Birthday" loading="lazy" />
+      <div class="gal-caption"><h3>Happy Birthday! 🎂</h3><p>Wishing you ALL the happiness in the world 🌟</p></div>
+    </div>
+    <div class="gallery-item wide reveal" style="transition-delay:.55s">
+      <img src="photo/photo_36_2026-03-26_20-26-14.jpg" alt="Forever loved" loading="lazy" />
+      <div class="gal-caption"><h3>Forever Loved 💜</h3><p>Loved today, tomorrow, and always 💜💜</p></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════ MESSAGE ══════════════ -->
+<section id="message">
+  <div class="section-header reveal">
+    <p class="section-tag">💌 For my beloved babi!</p>
+    <h2 class="section-title">Wishing you the happiest of birthdays</h2>
+    <div class="divider"></div>
+  </div>
+
+  <div class="msg-card reveal">
+    <span class="quote-mark q-open">&ldquo;</span>
+    <span class="quote-mark q-close">&rdquo;</span>
+    <p class="msg-text">
+      Hello babi, <strong>happy birthday!!</strong> I'm sorry if this is the only thing I can give you
+      for now hehe <em>medyo gipit</em>. But wishing you a good health and to always pursue your dreams.<br /><br />
+      And I want you to know I <strong>always love you</strong> and support you in every challenge
+      ahead that you are going to face with. May God always be with you and
+      <strong>more years of memories</strong>.<br /><br />
+      I love you babi and happiest birthday! <em>mwua mwua</em> 😘
+    </p>
+    <p class="msg-sig">— Your beloved Babi &nbsp;💜</p>
+  </div>
+</section>
+
+<!-- ══════════════ TIMELINE ══════════════ -->
+
+
+<!-- ══════════════ CAKE ══════════════ -->
+<section id="cake-section">
+  <div class="section-header reveal">
+    <p class="section-tag">🎂 Make a Wish</p>
+    <h2 class="section-title">Blow Out the Candles!</h2>
+    <div class="divider"></div>
+  </div>
+
+  <p class="cake-hint reveal">👆 Click the cake to blow out the candles one by one!</p>
+
+  <div class="cake-wrap reveal" id="cakeWrap" onclick="blowNextCandle()">
+    <svg class="cake-svg" viewBox="0 0 300 290" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="cg1" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%"   stop-color="#7c3aed"/>
+          <stop offset="100%" stop-color="#4c1d95"/>
+        </linearGradient>
+        <linearGradient id="cg2" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%"   stop-color="#9333ea"/>
+          <stop offset="100%" stop-color="#6b21a8"/>
+        </linearGradient>
+        <linearGradient id="cg3" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%"   stop-color="#a855f7"/>
+          <stop offset="100%" stop-color="#7c3aed"/>
+        </linearGradient>
+        <radialGradient id="fg" cx="50%" cy="75%" r="55%">
+          <stop offset="0%"   stop-color="#fef9c3"/>
+          <stop offset="40%"  stop-color="#f59e0b"/>
+          <stop offset="100%" stop-color="#ef4444" stop-opacity=".9"/>
+        </radialGradient>
+        <linearGradient id="cd1" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0%"   stop-color="#fde68a"/>
+          <stop offset="100%" stop-color="#f59e0b"/>
+        </linearGradient>
+        <linearGradient id="cd2" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0%"   stop-color="#e9d5ff"/>
+          <stop offset="100%" stop-color="#c084fc"/>
+        </linearGradient>
+        <linearGradient id="cd3" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0%"   stop-color="#fde68a"/>
+          <stop offset="100%" stop-color="#f59e0b"/>
+        </linearGradient>
+        <!-- Plate shadow -->
+        <radialGradient id="pg" cx="50%" cy="50%" r="50%">
+          <stop offset="0%"   stop-color="#4c1d95" stop-opacity=".7"/>
+          <stop offset="100%" stop-color="#4c1d95" stop-opacity="0"/>
+        </radialGradient>
+      </defs>
+
+      <!-- Plate shadow -->
+      <ellipse cx="150" cy="264" rx="148" ry="18" fill="url(#pg)"/>
+
+      <!-- ── Bottom tier ── -->
+      <rect x="22" y="188" width="256" height="72" rx="14" fill="url(#cg1)"/>
+      <ellipse cx="150" cy="188" rx="128" ry="16" fill="#9333ea"/>
+      <ellipse cx="150" cy="260" rx="128" ry="16" fill="#6b21a8"/>
+      <!-- frosting drip bottom -->
+      <path d="M42,188 Q54,172 66,188 Q78,172 90,188 Q102,172 114,188 Q126,172 138,188 Q150,172 162,188 Q174,172 186,188 Q198,172 210,188 Q222,172 234,188 Q246,172 258,188"
+            fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round" opacity=".85"/>
+      <!-- sprinkles -->
+      <circle cx="80"  cy="224" r="5" fill="#fde68a"/>
+      <circle cx="108" cy="232" r="4" fill="#f9a8d4"/>
+      <circle cx="150" cy="222" r="5" fill="#fde68a"/>
+      <circle cx="192" cy="232" r="4" fill="#a5f3fc"/>
+      <circle cx="220" cy="224" r="5" fill="#fde68a"/>
+      <circle cx="66"  cy="240" r="3" fill="#f9a8d4"/>
+      <circle cx="234" cy="240" r="3" fill="#a5f3fc"/>
+      <text x="136" y="254" font-size="11" fill="#fde68a" opacity=".7" text-anchor="middle">★ ★ ★</text>
+
+      <!-- ── Middle tier ── -->
+      <rect x="62" y="116" width="176" height="78" rx="12" fill="url(#cg2)"/>
+      <ellipse cx="150" cy="116" rx="88" ry="13" fill="#a855f7"/>
+      <ellipse cx="150" cy="194" rx="88" ry="13" fill="#7e22ce"/>
+      <!-- frosting drip middle -->
+      <path d="M74,116 Q85,103 96,116 Q107,103 118,116 Q129,103 140,116 Q151,103 162,116 Q173,103 184,116 Q195,103 206,116 Q217,103 226,116"
+            fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" opacity=".85"/>
+      <!-- sprinkles middle -->
+      <circle cx="96"  cy="152" r="4" fill="#fde68a"/>
+      <circle cx="128" cy="158" r="3" fill="#f9a8d4"/>
+      <circle cx="150" cy="150" r="4" fill="#fde68a"/>
+      <circle cx="174" cy="158" r="3" fill="#a5f3fc"/>
+      <circle cx="204" cy="152" r="4" fill="#fde68a"/>
+
+      <!-- ── Top tier ── -->
+      <rect x="104" y="62" width="92" height="58" rx="10" fill="url(#cg3)"/>
+      <ellipse cx="150" cy="62"  rx="46" ry="9"  fill="#c084fc"/>
+      <ellipse cx="150" cy="120" rx="46" ry="9"  fill="#9333ea"/>
+      <!-- frosting drip top -->
+      <path d="M112,62 Q121,52 130,62 Q139,52 148,62 Q157,52 166,62 Q175,52 184,62 Q188,52 188,62"
+            fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" opacity=".85"/>
+      <!-- star topper -->
+      <text x="150" y="99" font-size="14" fill="#fde68a" text-anchor="middle">★</text>
+
+      <!-- ══ Candle 1 ══ -->
+      <rect x="117" y="30" width="13" height="32" rx="3.5" fill="url(#cd1)"/>
+      <ellipse cx="123.5" cy="30" rx="6.5" ry="3.5" fill="#fde68a"/>
+      <g id="fl1" class="flame">
+        <ellipse cx="123.5" cy="18" rx="5.5" ry="10" fill="url(#fg)" opacity=".92"/>
+        <ellipse cx="123.5" cy="22" rx="3"   ry="5.5" fill="#fef9c3" opacity=".8"/>
+      </g>
+      <ellipse id="sm1" class="smoke" cx="123.5" cy="14" rx="3.5" ry="6" fill="#9ca3af"/>
+
+      <!-- ══ Candle 2 ══ -->
+      <rect x="143" y="24" width="13" height="38" rx="3.5" fill="url(#cd2)"/>
+      <ellipse cx="149.5" cy="24" rx="6.5" ry="3.5" fill="#c084fc"/>
+      <g id="fl2" class="flame" style="animation-delay:.12s">
+        <ellipse cx="149.5" cy="11" rx="5.5" ry="10" fill="url(#fg)" opacity=".92"/>
+        <ellipse cx="149.5" cy="15" rx="3"   ry="5.5" fill="#fef9c3" opacity=".8"/>
+      </g>
+      <ellipse id="sm2" class="smoke" cx="149.5" cy="8" rx="3.5" ry="6" fill="#9ca3af"/>
+
+      <!-- ══ Candle 3 ══ -->
+      <rect x="169" y="30" width="13" height="32" rx="3.5" fill="url(#cd3)"/>
+      <ellipse cx="175.5" cy="30" rx="6.5" ry="3.5" fill="#fde68a"/>
+      <g id="fl3" class="flame" style="animation-delay:.22s">
+        <ellipse cx="175.5" cy="18" rx="5.5" ry="10" fill="url(#fg)" opacity=".92"/>
+        <ellipse cx="175.5" cy="22" rx="3"   ry="5.5" fill="#fef9c3" opacity=".8"/>
+      </g>
+      <ellipse id="sm3" class="smoke" cx="175.5" cy="14" rx="3.5" ry="6" fill="#9ca3af"/>
+    </svg>
+  </div>
+
+  <p class="wish-msg" id="wishMsg">🎉 Your wish has been sent to the stars! May it all come true! 🌟</p>
+</section>
+
+<!-- ══════════════ FOOTER ══════════════ -->
+<footer>
+  <div class="footer-hearts">💜 💜 💜</div>
+  <p class="footer-msg">Made with love 💜</p>
+  <p class="footer-sub">Wishing you a day as extraordinary as you are &nbsp;•&nbsp; I love you always</p>
+</footer>
+
+<!-- Background music: Palagi by TJ Monterde -->
+<!-- Place your MP3 file at: audio/Palagi - TJ Monterde (Lyric Video)  @YourMoodLyrics.mp3 -->
+<audio id="bg-audio" loop preload="auto">
+  <source src="audio/Palagi - TJ Monterde (Lyric Video)  @YourMoodLyrics.mp3" type="audio/mpeg" />
+</audio>
+
+<!-- Music Player -->
+<div class="music-player">
+  <span class="music-label" id="music-label">Palagi — TJ Monterde</span>
+  <button class="music-btn" id="musicBtn" onclick="toggleMusic()" aria-label="Toggle music">🎵</button>
+</div>
+
+<script src="js/entrance.js"></script>
+<script src="js/effects.js"></script>
+<script src="js/cake.js"></script>
+<script src="js/music.js"></script>
+</body>
+</html>
